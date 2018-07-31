@@ -1,0 +1,19 @@
+class Solution {
+    public boolean checkRecord(String s) {
+        char[] arr = s.toCharArray();
+        int cntA = 0;
+        int cntL = 0;
+        
+        if(s.contains("LLL")) return false;
+        
+        for(int i = 0; i < arr.length; ++i) {
+            //char is a primitive data type, so it can be compared with ==
+                      
+            if (arr[i] == 'A') cntA++;
+            while(cntA > 1) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
