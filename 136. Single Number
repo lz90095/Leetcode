@@ -1,0 +1,16 @@
+class Solution {
+    public int singleNumber(int[] nums) {
+        // Arrays.sort(nums);
+        // for(int i : nums) {
+        //     二分法
+        //     找只有一个
+        // }
+        
+        //位运算 异或： 相同为0，不同为1
+        int target = 0;
+        for(int i : nums) {
+            target ^= i;
+        }
+        return target;
+    }
+}
