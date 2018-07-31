@@ -1,0 +1,17 @@
+class Solution {
+    public int[][] transpose(int[][] A) {
+        int rowLength = A.length;
+        int length = A[0].length;
+        
+        int[][] output = new int[length][rowLength];
+        
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[i].length; j++) {
+                output[j][i] = A[i][j];
+            }
+        }
+        return output;
+        
+        
+    }
+}
