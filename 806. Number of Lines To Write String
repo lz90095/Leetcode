@@ -1,0 +1,21 @@
+class Solution {
+    public int[] numberOfLines(int[] widths, String S) {
+        
+        int line = 1;
+        int units = 0;
+        
+        for (char c : S.toCharArray()) {
+            int width = widths[c - 'a'];
+            if (units + width > 100) {
+                line += 1;
+                units = width;
+            } else {
+                units += width;
+            }
+           
+        }
+        
+        
+        return new int[] {line, units};
+    }
+}
