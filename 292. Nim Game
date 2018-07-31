@@ -1,0 +1,13 @@
+class Solution {
+    public boolean canWinNim(int n) {
+        
+        // 4  f
+        // 5  t
+        // 6  t
+        // 7  t
+        // 8  f
+        // 4*n f
+        
+        return n % 4 != 0;
+    }
+}
