@@ -1,0 +1,9 @@
+class Solution {
+    public int distributeCandies(int[] candies) {
+        Set<Integer> type = new HashSet<>();
+        for (int candy : candies) {
+            type.add(candy);
+        }
+        return Math.min(candies.length / 2 , type.size());
+    }
+}
