@@ -1,0 +1,16 @@
+class Solution {
+    public int[][] flipAndInvertImage(int[][] A) {
+        //遍历这个二维数组
+        int n = A.length;
+        
+        for(int[] a : A) {
+            
+            for(int j = 0; j * 2 < n; j++) {
+                if(a[j] == a[n - j - 1]) {
+                    a[j] = a[n - j - 1] ^= 1;
+                }
+            }
+        }
+        return A;
+    }
+}
